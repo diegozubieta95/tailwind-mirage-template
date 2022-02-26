@@ -21,9 +21,16 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    HOST: 'http://localhost:3000',
   };
 
+  ENV.API_NAMESPACE = 'api';
+
   if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: true,
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
